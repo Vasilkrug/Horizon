@@ -2,13 +2,21 @@ import './App.scss';
 import React from "react";
 import {Route, Routes,} from "react-router";
 import Dashboard from "./pages/dashboard/dashboard";
+import NavBar from "./components/NavBar/NavBar";
+
 
 const App = () => {
     return (
         <div className="App">
-            <Routes>
-                <Route path={'/dashboard'} element={<Dashboard/>}/>
-            </Routes>
+                <NavBar/>
+            <div className="content-wrapper">
+                <header></header>
+                <main className={'main'}>
+                    <Routes>
+                        <Route path={'/'} element={<Dashboard/>}/>
+                    </Routes>
+                </main>
+            </div>
         </div>
     );
 }
