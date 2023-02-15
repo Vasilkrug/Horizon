@@ -1,0 +1,8 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  @media (max-width: 450px) {
+    justify-content: space-between;
+  }
+}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Logo from "../Logo/Logo";
 import {sideBarData} from "../../dataForHtmlelements/data";
 import {Sidebar, Menu, MenuItem, useProSidebar} from 'react-pro-sidebar';
@@ -9,8 +9,13 @@ import UpgradeInfo from "../UpgradeInfo/UpgradeInfo";
 
 const NavBar = () => {
     const {collapseSidebar, collapsed} = useProSidebar();
+
+    useEffect(() => {
+        collapseSidebar(true)
+    },[])
+
     return (
-        <Sidebar>
+        <Sidebar breakPoint={'md'}>
             <nav className={'nav'}>
                 <Menu className={'nav-list'}>
                     <div className={'menu-button'}>
