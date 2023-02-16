@@ -1,0 +1,28 @@
+.mobile-menu {
+  display: none;
+  position: fixed;
+  background-color: #FFFFFF;
+  top: 50px;
+  left: 0;
+  bottom: 0;
+  right: 50%;
+  transform: translateX(-150%);
+  transition: 0.5s ease-in-out;
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding:20px;
+
+    a {
+      color: #8F9BBA;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 20px;
+    }
+  }
+  &.active {
+    transform: translateX(0);
+  }
+
+}
