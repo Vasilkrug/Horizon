@@ -4,6 +4,12 @@
 
   .content-wrapper {
     width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    @media (max-width: 768px) {
+      padding: 0;
+    }
   }
 
 }

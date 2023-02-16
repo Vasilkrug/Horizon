@@ -1,10 +1,13 @@
 import React from 'react';
 import './dashboard.scss';
+import InfoList from "../../components/InfoList/InfoList";
 
 const Dashboard = () => {
     return (
-        <div>
-            <h1>Dasboard</h1>
+        <div className={'dashboard-page'}>
+          <InfoList/>
+            <div className="area-chart"></div>
+
         </div>
     );
 };
