@@ -5,11 +5,26 @@
   background-color: #FFFFFF;
   padding: 5px;
   border-radius: 20px;
-  transform: scale(1);
+  position: relative;
 
-  @media (max-width: 450px) {
+  .burger-btn {
+    display: none;
+  }
+
+
+  @media (max-width: 768px) {
     width: 100%;
     gap: 10px;
+    justify-content: space-around;
+    border-radius: 0;
+
+    .mobile-menu {
+      display: block;
+      position: fixed;
+    }
+    .burger-btn {
+      display: block;
+    }
   }
 }
 
@@ -20,8 +35,7 @@ input {
   color: #8F9BBA;
   background: #F4F7FE url("../../assets/images/icons/search.png") no-repeat 8px;
 
-  @media (max-width: 420px) {
-    padding: 8px 5px 8px 25px;
-    width: 180px;
+  @media (max-width: 768px) {
+    display: none;
   }
 }
