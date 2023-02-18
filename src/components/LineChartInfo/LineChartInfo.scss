@@ -1,0 +1,31 @@
+.line-chart-info {
+  padding: 10px;
+  font-family: 'DM Sans', sans-serif;
+  color: #8F9BBA;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  h3 {
+    font-size: 34px;
+    font-weight: 700;
+  }
+
+  .total {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+
+    span {
+      color: #05CD99;
+    }
+  }
+
+  .track {
+    color: #05CD99;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
