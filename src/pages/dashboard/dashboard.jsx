@@ -4,6 +4,8 @@ import InfoList from "../../components/InfoList/InfoList";
 import CustomLineChart from "../../components/Charts/CustomLineChart/CustomLineChart";
 import GridItemBox from "../../components/GridItemBox/GridItemBox";
 import LineChartInfo from "../../components/LineChartInfo/LineChartInfo";
+import MoreButton from "../../components/UI/MoreButton/MoreButton";
+import {stat} from "../../assets/images/icons/icons";
 
 const Dashboard = () => {
     const data1 = [
@@ -18,7 +20,7 @@ const Dashboard = () => {
     return (
         <div className={'dashboard-page'}>
             <InfoList classname={'grid-info-list'}/>
-            <GridItemBox classname={'line-chart'}>
+            <GridItemBox classname={'line-chart'} left={'This month'} right={<MoreButton img={stat}/>}>
                 <LineChartInfo/>
                 <CustomLineChart data={data1}/>
             </GridItemBox>

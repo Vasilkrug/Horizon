@@ -1,11 +1,14 @@
 .grid-item-box {
 
   .item-header {
-
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
   }
 
   .item-body {
     display: flex;
+    padding: 0 10px 10px 10px;
   }
 }
 
