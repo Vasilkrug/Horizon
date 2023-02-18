@@ -1,4 +1,25 @@
 .dashboard-page {
+  padding: 0 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
 
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 
+  .grid-info-list {
+    grid-column: 1 / -1;
+  }
+
+  .line-chart {
+    background-color: #FFFFFF;
+    grid-column: 1 / 2;
+    border-radius: 15px;
+  }
+
+  .bar-chart {
+    background-color: #FFFFFF;
+    border-radius: 15px;
+  }
 }
