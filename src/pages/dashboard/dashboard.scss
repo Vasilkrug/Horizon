@@ -1,7 +1,8 @@
 .dashboard-page {
   padding: 0 10px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(550px,1fr));
+
   grid-gap: 10px;
 
   @media (max-width: 768px) {
@@ -13,8 +14,8 @@
   }
 
   .line-chart {
+    grid-column: 1/2;
     background-color: #FFFFFF;
-    grid-column: 1 / 2;
     border-radius: 15px;
   }
 

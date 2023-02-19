@@ -6,28 +6,21 @@ import GridItemBox from "../../components/GridItemBox/GridItemBox";
 import LineChartInfo from "../../components/LineChartInfo/LineChartInfo";
 import MoreButton from "../../components/UI/MoreButton/MoreButton";
 import {stat} from "../../assets/images/icons/icons";
+import StackedBarChar from "../../components/Charts/StackedBarChar/StackedBarChar";
+import {lineChartData} from "../../components/Charts/chartsData";
 
 const Dashboard = () => {
-    const data1 = [
-        {name: 'SEP', age: 5, age2: 3},
-        {name: 'OCT', age: 5, age2: 3},
-        {name: 'NOV', age: 4, age2: 2},
-        {name: 'DEC', age: 7, age2: 5},
-        {name: 'JAN', age: 3, age2: 1},
-        {name: 'FEB', age: 4, age2: 2},
-    ]
 
     return (
         <div className={'dashboard-page'}>
             <InfoList classname={'grid-info-list'}/>
             <GridItemBox classname={'line-chart'} left={'This month'} right={<MoreButton img={stat}/>}>
                 <LineChartInfo/>
-                <CustomLineChart data={data1}/>
+                <CustomLineChart data={lineChartData}/>
             </GridItemBox>
-
-            <div className={'bar-chart'}>
-                bar
-            </div>
+            <GridItemBox classname={'bar-chart'} left={'Weekly Revenue'} right={<MoreButton img={stat}/>}>
+                <StackedBarChar/>
+            </GridItemBox>
         </div>
     );
 };
