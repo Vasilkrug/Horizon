@@ -2,11 +2,14 @@
   padding: 0 10px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(550px,1fr));
-
   grid-gap: 10px;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
+  }
+  .grid-item {
+    background-color: #FFFFFF;
+    border-radius: 15px;
   }
 
   .grid-info-list {
@@ -15,12 +18,9 @@
 
   .line-chart {
     grid-column: 1/2;
-    background-color: #FFFFFF;
-    border-radius: 15px;
   }
 
-  .bar-chart {
-    background-color: #FFFFFF;
-    border-radius: 15px;
+  .check-table {
+    grid-column: 1/2;
   }
 }
