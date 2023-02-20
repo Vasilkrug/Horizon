@@ -62,3 +62,44 @@ export const barChartData = [
         value3:30,
     },
 ];
+export const dailyTraffic = [
+    {
+        key:'00',
+        value:25,
+    },
+    {
+        key:'04',
+        value:30,
+    },
+    {
+        key:'08',
+        value:44,
+    },
+    {
+        key:'12',
+        value:12,
+    },
+    {
+        key:'16',
+        value:18,
+    },
+    {
+        key:'20',
+        value:21,
+    },
+    {
+        key:'24',
+        value:32,
+    },
+];
+export const pieData = [
+    {
+        name: "Your Files",
+        value: 35
+    },
+    {
+        name: "System",
+        value: 20
+    },
+
+];

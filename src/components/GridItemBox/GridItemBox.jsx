@@ -8,7 +8,7 @@ const GridItemBox = ({classname, left, right, children}) => {
                 <div className="left-head">
                     <h3>{left}</h3>
                 </div>
-                <div className="right-head">{right}</div>
+                <div className={'right-head'}>{right}</div>
             </div>
             <div className={'item-body'}>
                 {children}
