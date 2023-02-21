@@ -1,0 +1,18 @@
+.popup-menu {
+  position: absolute;
+  padding: 5px 15px 5px 15px;
+  background-color: #A3AED0;
+  color: #1B2559;
+  top: 40px;
+  right: 0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: 'DM Sans', sans-serif;
+  white-space: nowrap;
+
+  button {
+    font-weight: 700;
+  }
+}
