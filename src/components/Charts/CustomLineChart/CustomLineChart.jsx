@@ -11,6 +11,7 @@ const CustomLineChart = ({data}) => {
                     <CartesianGrid display={'none'}/>
                     <XAxis dataKey="name" stroke={'#A3AED0'} style={{fontFamily:'DM Sans, sans-serif',fontWeight:700}}/>
                 </LineChart>
+
             </ResponsiveContainer>
     );
 };

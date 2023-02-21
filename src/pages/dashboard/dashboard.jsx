@@ -9,8 +9,25 @@ import {more, stat} from "../../assets/images/icons/icons";
 import StackedBarChar from "../../components/Charts/StackedBarChar/StackedBarChar";
 import {lineChartData, barChartData, dailyTraffic, pieData} from "../../components/Charts/chartsData";
 import CustomPieChart from "../../components/Charts/CustomPieChart/CustomPieChart";
+import TaskList from "../../components/TaskList/TaskList";
+import {useIsVisible} from "../../hooks/useIsVisible";
+import Modal from "../../components/Modal/Modal";
+import CustomButton from "../../components/UI/CustomButton/CustomButton";
+import {useState} from "react";
 
 const Dashboard = () => {
+    const [isModalVisible, showModalToggle] = useIsVisible(false);
+    const [tasks, setTasks] = useState([]);
+    const [inputText, setInputText] = useState('');
+
+    const inputHandler = (text) => {
+        setInputText(text)
+    }
+    const addTask = () => {
+        setTasks([{id: Date.now(), text: inputText}, ...tasks])
+         showModalToggle()
+        setInputText('')
+    }
 
 
     return (
@@ -35,6 +52,24 @@ const Dashboard = () => {
                 </GridItemBox>
                 <GridItemBox classname={'grid-item'} left={'Your Pie Chart'}>
                     <CustomPieChart data={pieData}/>
+                </GridItemBox>
+            </div>
+            <div className={'task-list-calendar'}>
+                <GridItemBox
+                    left={'Tasks'}
+                    right={<MoreButton
+                        img={more}/>}
+                    classname={'grid-item tasks'}
+                    menu={'Add task'}
+                    popupOnclick={showModalToggle}
+                >
+                    <TaskList tasks={tasks}/>
+                    {isModalVisible ? <Modal inputValue={inputText} title={'Add task'} onChange={inputHandler}>
+                        <CustomButton onClick={addTask} text={'Add'} styles={{backgroundColor: '#A3AED0'}}/>
+                        <CustomButton onClick={showModalToggle} text={'Cancel'} styles={{backgroundColor: '#A3AED0'}}/>
+                    </Modal> : null}
+                </GridItemBox>
+                <GridItemBox left={'Calendar'} classname={'grid-item'}>
                 </GridItemBox>
             </div>
         </div>

@@ -18,7 +18,7 @@ const HeaderNav = () => {
     return (
         <div className="header-nav">
             <HiOutlineMenuAlt3 size={22} color={'#A3AED0'} className={'burger-btn'} onClick={menuToggle}/>
-            <input type="text"/>
+            <input className={'header-input'} type="text"/>
             <MdNotifications size={22} color={'#A3AED0'}/>
             <HiMoon size={22} color={'#A3AED0'}/>
             <AiOutlineInfoCircle size={22} color={'#A3AED0'}/>

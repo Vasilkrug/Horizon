@@ -1,10 +1,10 @@
 import React from 'react';
 import './MoreButton.scss';
 
-const MoreButton = ({img}) => {
+const MoreButton = ({img,onClick}) => {
     return (
         <div className={'more-button'}>
-            <button>{<img src={img} alt=""/>}</button>
+            <button onClick={onClick ? (e) => onClick(e) : null}>{<img src={img} alt=""/>}</button>
         </div>
     );
 };

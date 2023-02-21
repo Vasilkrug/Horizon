@@ -6,6 +6,7 @@
   padding: 5px;
   border-radius: 20px;
   position: relative;
+  z-index: 777;
 
   .burger-btn {
     display: none;
@@ -30,7 +31,7 @@
 }
 
 
-input {
+.header-input{
   padding: 8px 5px 8px 30px;
   border-radius: 20px;
   color: #8F9BBA;

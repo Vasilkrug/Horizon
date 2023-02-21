@@ -1,4 +1,5 @@
 .grid-item-box {
+  position: relative;
 
   .item-header {
     padding: 10px;
@@ -11,6 +12,7 @@
       font-size: 14px;
       color: #05CD99;
       font-weight: 700;
+      position: relative;
     }
   }
 

@@ -1,12 +1,13 @@
 .dashboard-page {
-  padding: 0 10px;
+  padding: 0 10px 20px 10px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(550px,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
   grid-gap: 10px;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
+
   .grid-item {
     background-color: #FFFFFF;
     border-radius: 15px;
@@ -23,13 +24,21 @@
   .check-table {
     grid-column: 1/2;
   }
+
   .two-charts {
     grid-column: 1/2;
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     @media (max-width: 768px) {
       grid-template-columns: 1fr;
     }
+  }
+
+  .task-list-calendar {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
   }
 }
